@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(fileupload({
     useTempFiles:true,
     tempFileDir:"/tmp/"
-}))
+}));
 
 app.use("/api/v1/user" , userRoutes)
 
