@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 
 import { ConnectDB } from "./config/db.config.js";
 import userRoutes from "./routes/user.routes.js";
+import videoRoutes from "./routes/video.routes.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(fileupload({
 }));
 
 app.use("/api/v1/user" , userRoutes)
+app.use("/api/v1/video" , videoRoutes)
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`)
